@@ -1,3 +1,0 @@
-/home/f0/Display/build/CMakeFiles/dash.dir
-/home/f0/Display/build/CMakeFiles/edit_cache.dir
-/home/f0/Display/build/CMakeFiles/rebuild_cache.dir
