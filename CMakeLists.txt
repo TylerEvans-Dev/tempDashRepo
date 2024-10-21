@@ -7,5 +7,8 @@ set(CMAKE_CXX_STANDARD 17)
 project(dash)
 #make executable
 add_executable(dash src/main.cpp)
-
+#adds lib. 
+add_library(wp, WiringPi)
+#links the lib
+target_link_libraries(dash ${wp})
 
