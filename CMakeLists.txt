@@ -1,14 +1,16 @@
-#Tyler Evans u1313811
-#Here is a make file
-cmake_minimum_required(VERSION 3.1)
-set(CMAKE_CXX_STANDARD 17)
+cmake_minimum_required(VERSION 3.5)
+project(wiringPiProject)
 
-#declare a project
-project(dash)
-#make executable
-add_executable(dash src/main.cpp)
-#adds lib. 
-add_library(wp, WiringPi)
-#links the lib
-target_link_libraries(dash ${wp})
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add the executable
+add_executable(wiringPiExample src/main.cpp)
+
+# Find the WiringPi library
+find_library(WIRINGPI_LIB wiringPi)
+
+# Link WiringPi to the project
+target_link_libraries(wiringPiExample ${WIRINGPI_LIB})
 
